@@ -4,11 +4,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/redmi/note_3g/note_3g-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/note_3g/note_3g-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/redmi/note_3g/overlay
+DEVICE_PACKAGE_OVERLAYS += device/xiaomi/note_3g/overlay
 
-LOCAL_PATH := device/redmi/note_3g
+LOCAL_PATH := device/xiaomi/note_3g
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else

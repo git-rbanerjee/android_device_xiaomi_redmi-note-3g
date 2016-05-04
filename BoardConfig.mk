@@ -1,8 +1,8 @@
 # inherit from the proprietary version
--include vendor/redmi/note_3g/BoardConfigVendor.mk
+-include vendor/xiaomi/note_3g/BoardConfigVendor.mk
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/redmi/note_3g/include
+TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/note_3g/include
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6592
@@ -34,8 +34,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 6453985280
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/redmi/note_3g/kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/redmi/note_3g/bootimg.mk
+TARGET_PREBUILT_KERNEL := device/xiaomi/note_3g/kernel
+BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/note_3g/bootimg.mk
 BOARD_MKBOOTIMG_ARGS := --board 1419997733
 BOARD_CUSTOM_BOOTIMG := true
 
@@ -52,7 +52,7 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # EGL
-BOARD_EGL_CFG := device/redmi/note_3g/configs/egl.cfg
+BOARD_EGL_CFG := device/xiaomi/note_3g/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
@@ -67,7 +67,7 @@ COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/BOOT/BOOT/boot/boot_mode
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/redmi/note_3g/ril/
+BOARD_RIL_CLASS := ../../../device/xiaomi/note_3g/ril/
 
 BOARD_CONNECTIVITY_VENDOR := MediaTek
 BOARD_CONNECTIVITY_MODULE := conn_soc
@@ -87,13 +87,13 @@ WIFI_DRIVER_FW_PATH_P2P:=P2P
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/redmi/note_3g/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/note_3g/bluetooth
 
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # CWM
-TARGET_RECOVERY_FSTAB := device/redmi/note_3g/rootdir/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/xiaomi/note_3g/rootdir/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP
@@ -114,7 +114,7 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
 BOARD_SEPOLICY_DIRS := \
-       device/redmi/note_3g/sepolicy
+       device/xiaomi/note_3g/sepolicy
 
 # Use old sepolicy version
 POLICYVERS := 26
