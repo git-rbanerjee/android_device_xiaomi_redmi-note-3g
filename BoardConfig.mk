@@ -1,8 +1,8 @@
 # inherit from the proprietary version
--include vendor/kingzone/k1_turbo/BoardConfigVendor.mk
+-include vendor/redmi/note_3g/BoardConfigVendor.mk
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/kingzone/k1_turbo/include
+TARGET_SPECIFIC_HEADER_PATH := device/redmi/note_3g/include
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6592
@@ -28,21 +28,22 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 
 # make_ext4fs requires numbers in dec format
-BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1468006400
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 5452595200
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 6453985280
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/kingzone/k1_turbo/kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/kingzone/k1_turbo/bootimg.mk
+TARGET_PREBUILT_KERNEL := device/redmi/note_3g/kernel
+BOARD_CUSTOM_BOOTIMG_MK := device/redmi/note_3g/bootimg.mk
 BOARD_MKBOOTIMG_ARGS := --board 1419997733
 BOARD_CUSTOM_BOOTIMG := true
 
 TARGET_KMODULES := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := k1_turbo,htt92_wet_jb9
+TARGET_OTA_ASSERT_DEVICE := note_3g,lcsh92_wet_jb9
+BLOCK_BASED_OTA :=false
 
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -51,7 +52,7 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # EGL
-BOARD_EGL_CFG := device/kingzone/k1_turbo/configs/egl.cfg
+BOARD_EGL_CFG := device/redmi/note_3g/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
@@ -65,7 +66,7 @@ COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE
 ADDITIONAL_DEFAULT_PROPERTIES += ro.mount.fs=EXT4
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/kingzone/k1_turbo/ril/
+BOARD_RIL_CLASS := ../../../device/redmi/note_3g/ril/
 
 BOARD_CONNECTIVITY_VENDOR := MediaTek
 BOARD_CONNECTIVITY_MODULE := conn_soc
@@ -85,15 +86,15 @@ WIFI_DRIVER_FW_PATH_P2P:=P2P
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/kingzone/k1_turbo/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/redmi/note_3g/bluetooth
 
 # CWM
-TARGET_RECOVERY_FSTAB := device/kingzone/k1_turbo/rootdir/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/redmi/note_3g/rootdir/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP
 #RECOVERY_VARIANT=twrp
-DEVICE_RESOLUTION := 1080x1920
+DEVICE_RESOLUTION := 720x1280
 BOARD_HAS_LARGE_FILESYSTEM := true
 TW_NO_USB_STORAGE := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
@@ -109,7 +110,7 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
 BOARD_SEPOLICY_DIRS := \
-       device/kingzone/k1_turbo/sepolicy
+       device/redmi/note_3g/sepolicy
 
 BOARD_SEPOLICY_UNION := \
        device.te \
