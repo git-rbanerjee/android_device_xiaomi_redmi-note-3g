@@ -8,19 +8,18 @@
   * Sensors
   * Camera (photo and video recording)
   * GPS
-  * NFC
   * OTG
   * Tethering (Wifi, Bluetooth and USB)
 
 * Compilation
 
-        # repo init -u git://github.com/fire855/android.git -b cm-12.1
+        # repo init -u https://github.com/git-rbanerjee/android_device_xiaomi_redmi-note-3g.git -b cm-12.1
         
         # repo sync
         
         # source build/envsetup.sh
         
-        # brunch cm_k1_turbo-userdebug
+        # brunch cm_note_3g-userdebug
 
 # MTK
 
@@ -35,3 +34,20 @@ Services requires root:
   * surfaceflinger depends on sched_setscheduler calls, unable to change process priority from 'system' user (default user 'system')
 
   * mediaserver depends on /data/nvram folder access, unable to do voice calls from 'media' user (default user 'media')
+ 
+  
+#CREDITS - Fire855(https://github.com/fire855/android_device_kingzone_k1-turbo)
+BIg thanks to:
+@Axet
+@chrmhoffmann
+@DerTeufel1980
+@Al3XKOoL
+@kashifmin
+@Santhosh M
+@ariafan
+@hyperion70
+@superdragonpt
+CyanogenMod Team
+XDA
+
+
